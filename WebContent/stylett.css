@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 0.5;
+}
+
+/* apply a natural box layout model to all elements,
+ but allowing components to change */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+html,
+body {
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.mainTitle{
+	color: blue;
+}
