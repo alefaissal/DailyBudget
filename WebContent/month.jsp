@@ -8,7 +8,17 @@
 </head>
 <body>
 	<h3>This is the updated information for this month</h3>
-	<h4>Date:</h4>
+	<div>
+		<h3 id="date"></h3>
+		<script>
+			n = new Date();
+			y = n.getFullYear();
+			m = n.getMonth() + 1;
+			d = n.getDate();
+			document.getElementById("date").innerHTML = "Date: " + m + "/" + d
+					+ "/" + y;
+		</script>
+	</div>
 
 	<table>
 		<tr>
@@ -24,8 +34,12 @@
 
 	</table>
 
-	<button>Check Daily page</button>
-	<button>Check Year page</button>
+	<form action="/DailyBudget" method="get">
+		<button type="submit">Check Daily page</button>
+	</form>
+	<form action="/DailyBudget/year.jsp" method="get">
+		<button type="submit">Check Year page</button>
+	</form>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>This is the updated information for this Year</h3>
-	<h4>Date:</h4>
+	<h3>This is the updated information for this Year</h3>
+	<div>
+		<h3 id="date"></h3>
+		<script>
+			n = new Date();
+			y = n.getFullYear();
+			m = n.getMonth() + 1;
+			d = n.getDate();
+			document.getElementById("date").innerHTML = "Date: " + m + "/" + d
+					+ "/" + y;
+		</script>
+	</div>
 
 	<table>
 		<tr>
@@ -21,8 +31,11 @@
 		</tr>
 
 	</table>
-
-	<button>Check Daily page</button>
-	<button>Check Month page</button>
+	<form action="/DailyBudget" method="get">
+		<button type="submit">Check Daily page</button>
+	</form>
+	<form action="/DailyBudget/month.jsp" method="get">
+		<button type="submit">Check Month page</button>
+	</form>
 </body>
 </html>
